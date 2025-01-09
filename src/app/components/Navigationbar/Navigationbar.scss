@@ -1,0 +1,43 @@
+.navigation {
+       .input-search {
+              & :is(input , button) {
+                     padding: 8px 15px;
+                     font-size: var(--sm-font-size);
+              } > input {
+                     padding-inline: 10px;
+                     outline: none;
+                     caret-color: #D90429;
+              } button.search {
+                     background: #D90429;
+                     color: #fff;
+                     &:active {
+                            scale: 0.9;
+                     }
+              }
+       }
+       .authentication{
+              a {
+                     display: inline-block;
+                     padding: 9px 20px;
+                     border-radius: inherit;
+                     color: #fff;
+                     font-size: var(--sm-font-size);
+              } a:first-child {
+                     background: var(--primary-color);
+              } a:last-child {
+                     background: var(--main-color);
+              }
+       }
+
+       .menuButton {
+              background: #333;
+              // border: 1px solid var(--primary-color);
+       }
+
+       .language {
+              .icon {
+                     background: var(--primary-color);
+                     padding: 10px;
+              }
+       }
+}

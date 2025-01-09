@@ -1,0 +1,12 @@
+.marqueeLinksNav {
+       border-top: 1px solid #E5E7EB;
+       overflow-x: auto;
+
+       li a {
+              font-size: var(--sm-font-size);
+              display: block;
+              text-wrap: nowrap;
+              width: fit-content;
+              color: #777;
+       }
+}
