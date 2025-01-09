@@ -1,5 +1,6 @@
 form  {
        padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.966);
        %styleFont {
               font-size: var(--sm-font-size);
        }
@@ -15,10 +16,19 @@ form  {
               margin-top: 15px;
               font-size: 3rem;
               font-weight: bold;
+              color: var(--primary-color)
        }
 
        .title p {
               @extend %styleFont;
+       }
+
+       .title a .icon {
+              background: var(--primary-color);
+
+              svg path {
+                     fill: #fff;
+              }
        }
 
        .inputs-form .input  {
@@ -44,22 +54,21 @@ form  {
                      width: 100%;
                      outline: none;
               }
+              
+       }
+
+       p {
+              @extend %styleFont;
        }
 
        p a {
               color: rgb(131, 131, 230);
               text-decoration: 1px underline rgb(131, 131, 230);
+              @extend %styleFont;
        }
 
-       .side-right {
-              padding: 0;
-              width: 54%;
-       }
-
-       .side-right video {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
+       .footer :is(.buttons button, .buttons button a, p) {
+              @extend %styleFont;
        }
 
        .footer .buttons button {
@@ -71,7 +80,8 @@ form  {
        }
 
        .footer .buttons button + button {
-              background: #eee;
+              background: var(--primary-color);
+              color: #fff;
        }
 
        .footer .buttons button + button[disabled] {

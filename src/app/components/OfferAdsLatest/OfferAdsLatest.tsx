@@ -1,4 +1,11 @@
-import Image from "next/image";
+"use client"
+import dynamic from "next/dynamic";
+// import Image from "next/image";
+
+const Image = dynamic(() => import("next/image"), {
+       ssr: false, 
+       loading: () => <div>Loading...</div> 
+});
 
 export default function OfferAdsLatest() {
        

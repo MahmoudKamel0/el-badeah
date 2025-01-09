@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import Navigationbar from "./components/Navigationbar/Navigationbar";
+import NavigationbarWrapper from "./components/NavigationbarWrapper/NavigationbarWrapper";
 
 export const metadata: Metadata = {
   title: "البضاعه | Goods - Your Comprehensive Goods Marketplace",
@@ -16,7 +16,7 @@ export default function RootLayout({
        return (
        <html lang="en">
        <body>
-              <Navigationbar />
+              <NavigationbarWrapper />
               {children}
        </body>
        </html>
