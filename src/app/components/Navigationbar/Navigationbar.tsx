@@ -20,16 +20,16 @@ export default function Navigationbar() {
                      <div className="rightSide-logo-search | flex items-center justify-between flex-auto gap-10">
                             <Link href="/"><Image src="/logo.svg" alt="logo elbeadah" loading="lazy" width="80" height="80"/></Link>
 
-                            <div className={`input-search | ${!isShowMenu ? 'hidden' : 'flex absolute top-32 left-0 right-0 w-full mx-auto border bg-white'} md:static md:flex flex-auto rounded-full overflow-hidden p-2 gap-2 border`}>
+                            <div className={`input-search | ${!isShowMenu ? 'hidden' : 'flex absolute top-32 left-0 right-0 w-full mx-auto border bg-white'} md:static md:flex flex-auto rounded-full overflow-hidden p-2 gap-2 border z-20`}>
                                    <Dropdown />
                                    <input onKeyDown={enterSearch} className="flex-auto" type="text" placeholder="عايز تشتري إيه؟ تصفح بين السيارات، العقارات، الإلكترونيات، وأكثر!" />
                                    <button className="search | hidden lg:flex items-center justify-center rounded-full gap-5">أبحث الان <Search /></button>
                             </div>
                      </div>
 
-                     <div className={`authentication | ${!isShowMenu ? 'hidden' : 'flex absolute sm:top-40 md:top-32 left-0 right-0 w-full mx-auto border bg-white'} lg:static w-auto lg:flex rounded-full overflow-hidden p-2 gap-2 border`}>
-                            <Link href="/pages/Login">تسجيل الدخول</Link>
-                            <Link href="/register">انشاء حساب</Link>
+                     <div className={`authentication | ${!isShowMenu ? 'hidden' : 'flex absolute top-56 md:top-32 left-0 right-0 w-full mx-auto border bg-white'} lg:!static !w-auto lg:flex rounded-full overflow-hidden p-2 gap-2 border z-10`}>
+                            <Link className="flex flex-auto lg:inline text-center" href="/pages/Login">تسجيل الدخول</Link>
+                            <Link className="flex flex-auto lg:inline text-center" href="/register">انشاء حساب</Link>
                      </div>
 
                      <button onClick={()=> setIsShowMenu(!isShowMenu)} className="menuButton | block lg:hidden p-3 rounded-full"><MenuButton /></button>

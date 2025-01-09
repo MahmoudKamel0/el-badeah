@@ -23,7 +23,7 @@ export default function Dropdown() {
                      <p className="flex items-center justify-start gap-3" onClick={() => setShowDropdown(!showDropdown)}>{selectCity} <DropdownIcons /></p>
 
                      <ul ref={dropdownReference}
-                     className={`${!showDropdown ? 'hidden' : 'flex'} z-10 absolute top-32 p-5 flex-col items-start justify-start gap-7`}>
+                     className={`${!showDropdown ? 'hidden' : 'flex'} z-20 static md:absolute top-32 p-5 flex-col items-start justify-start gap-7`}>
                             <input type="text" placeholder="ابحث عن المحافظه" value={searchTerm}
                                    onChange={(search) => handleSearch(search)} />
 
