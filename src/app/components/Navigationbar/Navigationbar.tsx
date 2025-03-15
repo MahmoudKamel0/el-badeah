@@ -8,13 +8,16 @@ import MarqueeLinksNav from "../MarqueeLinksNav/MarqueeLinksNav"
 import MenuButton from "../../../../public/menuButton"
 import { useState } from "react"
 import Lang from "../../../../public/lang"
-import { enterSearch } from "@/app/features/handleSearchAboutPages"
+import { handleSearch } from "@/app/utils/handleSearch"
+import { useRouter } from "next/navigation"
 
 
 
 export default function Navigationbar() {
 
        const [isShowMenu, setIsShowMenu] = useState(false)
+       const [valueInput, setValueInput] = useState("")
+       const router = useRouter()
 
        return (
        <>
@@ -22,11 +25,11 @@ export default function Navigationbar() {
                      <div className="rightSide-logo-search | flex items-center justify-between flex-auto gap-10">
                             <Link href="/"><Image src="/logo.svg" alt="logo elbeadah" loading="lazy" width="80" height="80"/></Link>
 
-                            <div className={`input-search | ${!isShowMenu ? 'hidden' : 'flex absolute top-32 left-0 right-0 w-full mx-auto border bg-white'} md:static md:flex flex-auto rounded-full overflow-hidden p-2 gap-2 border z-20`}>
+                            <form onSubmit={(e)=> handleSearch(e, valueInput, router)} className={`input-search | ${!isShowMenu ? 'hidden' : 'flex absolute top-32 left-0 right-0 w-full mx-auto border bg-white'} md:static md:flex flex-auto rounded-full overflow-hidden p-2 gap-2 border z-20`}>
                                    <Dropdown />
-                                   <input onKeyDown={enterSearch} className="flex-auto" type="text" placeholder="عايز تشتري إيه؟ تصفح بين السيارات، العقارات، الإلكترونيات، وأكثر!" />
+                                   <input className="flex-auto" onInput={(e)=> setValueInput((e.target as HTMLInputElement).value)} value={valueInput} type="text" placeholder="عايز تشتري إيه؟ تصفح بين السيارات، العقارات، الإلكترونيات، وأكثر!" />
                                    <button className="search | hidden lg:flex items-center justify-center rounded-full gap-5">أبحث الان <Search /></button>
-                            </div>
+                            </form>
                      </div>
 
                      <div className={`authentication | ${!isShowMenu ? 'hidden' : 'flex absolute top-56 md:top-32 left-0 right-0 w-full mx-auto border bg-white'} lg:!static !w-auto lg:flex rounded-full overflow-hidden p-2 gap-2 border z-10`}>
