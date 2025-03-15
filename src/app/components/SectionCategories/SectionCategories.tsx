@@ -21,8 +21,26 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                      </div>
 
                      <div className="items | w-full mt-10 flex items-center justify-start gap-20 overflow-x-auto">
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
+
+                                   <div className="info | mt-5 flex items-center justify-between">
+                                          <div>
+                                          <h3>البهنساوي</h3>
+                                          <p className='flex gap-5 mt-4'><Location />المريوطية</p>
+                                          </div>
+
+                                          <ButtonFavorite />
+                                   </div>
+
+                                   <div className="price-timePublisher | flex items-center justify-between mt-12">
+                                          <span className='price'>5000000  ج.م</span>
+                                          <span className='time'>منذ 10 أيام</span>
+                                   </div>
+                            </div>
+                            
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -39,8 +57,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -57,8 +75,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -75,8 +93,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -93,8 +111,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -111,8 +129,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -129,8 +147,8 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                    </div>
                             </div>
 
-                            <div className="item | min-w-[200px] lg:min-w-[300px] ">
-                                  <Image className='overflow-hidden rounded-3xl' src={Photo} alt="category" />
+                            <div className="item | block min-w-[200px] max-w-[200px] lg:min-w-[300px] lg:max-w-[300px]">
+                                  <Link className='inline-block overflow-hidden rounded-3xl' href="/"><Image src={Photo} alt="category" /></Link>
 
                                    <div className="info | mt-5 flex items-center justify-between">
                                           <div>
@@ -146,6 +164,7 @@ export default function SectionCategories({title = 'unKnown', description ='unKn
                                           <span className='time'>منذ 10 أيام</span>
                                    </div>
                             </div>
+
 
                      </div>
               </section>

@@ -1,4 +1,15 @@
 .categories {
+       .item {
+              padding-bottom: 20px;
+       }
+
+       img {
+              transition: 0.7s;
+              &:hover {
+                     transform: scale(1.1);
+              }
+       }             
+
        .title {
               h2 {
                      color: var(--primary-color);
@@ -67,9 +78,4 @@
               }
        }
 
-       .items {
-              .item {
-                     padding-bottom: 20px;
-              }
-       }
 }
