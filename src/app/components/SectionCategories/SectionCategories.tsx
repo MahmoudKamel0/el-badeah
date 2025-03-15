@@ -7,15 +7,15 @@ import './SectionCategories.scss'
 import Location from '../../../../public/location'
 import ButtonFavorite from '../ButtonFavorite/ButtonFavorite'
 
-export default function SectionCategories({title, description, className, id}: {title?: string, description?: string, data?:object, className?:string, id?:string}) {
+export default function SectionCategories({title = 'unKnown', description ='unKnown', className, id}: {title: string, description: string, data?:object, className?:string, id?:string}) {
        
        
        return (
               <section id={id} className={`categories | ${className} px-10`} dir='rtl'>
                      <div className="header | flex items-end justify-between ">
                             <div className="title">
-                                   <h2>العقارات</h2>
-                                   <p>جميع الخدمات العقارية</p>
+                                   <h2>{title}</h2>
+                                   <p>{description}</p>
                             </div>
                             <Link href="/categories">عرض المزيد</Link>
                      </div>

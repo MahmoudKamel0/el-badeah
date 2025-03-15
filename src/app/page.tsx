@@ -10,9 +10,9 @@ export default function Home() {
               <Slider />
               <OfferAdsLatest />
 
-              <SectionCategories className="mt-14"/>
-              <SectionCategories className="mt-20"/>
-              <SectionCategories className="mt-20"/>
+              <SectionCategories title="العقارات" description="جميع الخدمات العقارية" className="mt-14"/>
+              <SectionCategories title="العقارات" description="جميع الخدمات العقارية" className="mt-14"/>
+              <SectionCategories title="العقارات" description="جميع الخدمات العقارية" className="mt-14"/>
        </>
        )
 }
